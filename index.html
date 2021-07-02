@@ -17,19 +17,6 @@
             <div class="col-sm">
                 <div class="card" style="padding: 10px; margin-top: 10px; margin-bottom: 10px;">
                     <div id="app">
-                        <div class="container">
-                            <h5>Sort By:</h5>
-                            <button class="btn btn-light btn-sm" @click='sortedPrice()'>Price</button>
-                            <button class="btn btn-light btn-sm" @click='sortedTitle()'>Subject</button>
-                            <button class="btn btn-light btn-sm" @click='sortedLocation()'>Location</button>
-                            <button class="btn btn-light btn-sm" @click='sortedAvailable()'>Availability</button>
-                            <div>
-                                <button class="btn btn-light btn-sm" style="margin-top: 5px;"
-                                    @click='sortedAscending()'>Ascending</button>
-                                <button class="btn btn-light btn-sm" style="margin-top: 5px;"
-                                    @click='sortedDescending()'>Descending</button>
-                            </div>
-                        </div>
                         <header>
                             <h3> {{ sitename }}</h3>
                             <!-- <button class="btn btn-info" @click='' style="float: right;">Cart</button> -->
@@ -82,14 +69,6 @@
                                     <strong> Last Name:</strong>
                                     <!-- This input field is bound to 'lastName' in the 'order' object -->
                                     <input v-model.trim="order.lastName" />
-                                </p>
-                                <p>
-                                    <!-- This input field is bound to 'Address' in the 'order' object -->
-                                    <strong>Address:</strong> <input v-model='order.address' />
-                                </p>
-                                <p>
-                                    <!-- This input field is bound to 'City' in the 'order' object -->
-                                    <strong>City:</strong><input v-model='order.city' />
                                 </p>
                                 <P>
                                     <strong>Phone Number:</strong><input v-model.number="order.phone" type="number">
