@@ -113,7 +113,19 @@
             submitForm() {
                 alert('order has been placed')
             },
-            
+            // itemList: function(){
+            //     showCart=[
+            //         {
+            //             "name": "",
+            //             "price": ""
+            //         }
+
+
+            //     ]
+            // },
+            //Remove canAddToCart from Computed to Method since computed does not take parameters, 
+            //We are now working with an array of objects and therefore need to pass the product
+            //and its ID to identify which product we are working with
             canAddToCart: function (product) {
                 return product.availableInventory > this.cartCount(product.id);
             },
@@ -127,7 +139,26 @@
                 }
                 return count;
             },
-            
+            sortedPrice() {
+
+                this.products.sort((a, b) => a.price < b.price ? 1 : -1);;
+
+            },
+            sortedTitle() {
+                this.products.sort((a, b) => a.title < b.title ? 1 : -1);
+            },
+            sortedLocation() {
+                this.products.sort((a, b) => a.location < b.location ? 1 : -1);;
+            },
+            sortedAvailable() {
+                this.products.sort((a, b) => a.availableInventory < b.availableInventory ? 1 : -1);;
+            },
+            sortedAscending() {
+                this.products.sort((a, b) => a.price > b.price ? 1 : -1);;
+            },
+            sortedDescending() {
+                this.products.sort((a, b) => a.price < b.price ? 1 : -1);;
+            },
         },
         computed: {
             cartItemCount: function () {
