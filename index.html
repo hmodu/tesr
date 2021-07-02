@@ -74,33 +74,7 @@
                                     <strong>Phone Number:</strong><input v-model.number="order.phone" type="number">
                                 </P>
 
-                                <p>
-                                    <!-- This input field is bound to 'State' in the 'order' object -->
-                                    <strong>State</strong>
-                                    <select v-model='order.state'>
-                                        <option disabled value="">State</option>
-                                        <option v-for="(state, key) in states" v-bind:value="state">
-                                            {{state}}
-                                        </option>
-                                    </select>
-                                </p>
-                                <!-- This input field is bound to 'Zip' in the 'order' object -->
-                                <p><strong>Zip/ Postal Code</strong><input v-model.number='order.zip' type="number"></p>
-
-                                <!-- This input field is bound to 'Is Gift' in the 'order' object -->
-                                <p>
-                                    <input type="checkbox" id="gift" value="true" v-model="order.gift"
-                                        v-bind:true-value="order.sendGift" v-bind:false-value="order.dontSendGift">
-                                    <label for="gift"> Ship as Gift?</label>
-                                </p>
-
-                                <p>
-                                    <input type="radio" id="home" value="Home" v-model="order.method">
-                                    <label for="home">Home</label>
-
-                                    <input type="radio" id="business" value="Business" v-model="order.method">
-                                    <label for="business">Business</label>
-                                </p>
+                                
                                 <button v-on:click="submitForm" class="btn btn-info">Place Order</button>
                             </div>
                         </main>
