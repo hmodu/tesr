@@ -1,0 +1,15 @@
+{
+    "name": "Group 3 - Coursework",
+    "short_name": "coursework_group_3",
+    "description": "school lesson Group 3 CW3",
+    "icons": [
+       {
+        "src": "images/",
+        "sizes": "512x512",
+        "type": "image/png"
+       }
+    ],
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#B12A34"
+ }
